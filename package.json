@@ -1,8 +1,8 @@
 {
   "name": "react-native-admost",
-  "title": "React Native Admost",
+  "title": "Admost for React Native",
   "version": "1.0.0",
-  "description": "TODO",
+  "description": "Admost for React Native",
   "main": "index.js",
   "files": [
     "README.md",
@@ -16,15 +16,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-admost.git",
-    "baseUrl": "https://github.com/github_account/react-native-admost"
+    "url": "git+https://github.com/melihmucuk/react-native-admost.git",
+    "baseUrl": "https://github.com/melihmucuk/react-native-admost"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "admost"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "yourname@email.com"
+    "name": "Monkeys Team",
+    "email": "melih@monkeysteam.com"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",
