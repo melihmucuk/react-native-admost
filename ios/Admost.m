@@ -45,4 +45,14 @@ RCT_EXPORT_METHOD(setUserChild:(BOOL *)userChild)
     [AMRSDK setUserChild:userChild];
 }
 
+RCT_EXPORT_METHOD(trackPurchase:(NSString *)transactionId currency:(NSString *)currencyCode price:(CGFloat)price)
+{
+    [AMRSDK trackPurchase:transactionId currencyCode:currencyCode amount:price];
+}
+
+RCT_EXPORT_METHOD(setUserId:(NSString *)userId
+{
+    [AMRSDK setUserId:userId];
+}
+
 @end

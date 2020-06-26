@@ -1,4 +1,8 @@
-import { NativeModules, NativeEventEmitter } from "react-native";
+import {
+  NativeModules,
+  NativeEventEmitter,
+  requireNativeComponent,
+} from "react-native";
 
 const { Admost, AdmostInterstitial, AdmostRewarded } = NativeModules;
 
@@ -22,10 +26,12 @@ const AREvents = {
 
 const AIEventEmitter = new NativeEventEmitter(AdmostInterstitial);
 const AREventEmitter = new NativeEventEmitter(AdmostRewarded);
+const AdmostBanner = requireNativeComponent("AdmostBanner");
 
 export {
   AdmostInterstitial,
   AdmostRewarded,
+  AdmostBanner,
   AIEvents,
   AREvents,
   AIEventEmitter,

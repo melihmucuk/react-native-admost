@@ -93,7 +93,8 @@ const AIEvents = {
 
 ```javascript
 import { AdmostRewarded, AREvents, AREventEmitter } from "react-native-admost";
-
+//
+//
 componentDidMount = async () => {
   await AdmostRewarded.initWithZoneID("2bdefd44-5269-4cbc-b93a-373b74a2f067");
   await AdmostRewarded.loadAd();
@@ -129,4 +130,45 @@ const AREvents = {
   DID_DISMISS: "didDismissRewardedVideo",
   DID_COMPLETE: "didCompleteRewardedVideo",
 };
+```
+
+### Banner
+
+```javascript
+import Admost, {
+  AdmostBanner,
+} from 'react-native-admost';
+//
+//
+render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.welcome}>☆Admost example☆</Text>
+          <AdmostBanner
+            zoneID={'b4009772-de04-42c4-bbaa-c18da9e4a1ab'}
+            width={320}
+          />
+      </View>
+    );
+  }
+```
+
+## Extras
+
+**In App Purchase Tracking**
+
+```javascript
+import Admost from "react-native-admost";
+//
+//
+Admost.trackPurchase("transactionId", "currency", "price as float");
+```
+
+**Setting Application User Id**
+
+```javascript
+import Admost from "react-native-admost";
+//
+//
+Admost.setUserId("applicationUserID");
 ```
