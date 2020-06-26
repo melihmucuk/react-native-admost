@@ -18,18 +18,26 @@
 
 ### Android
 
-Coming soon...
+You should install Ad Networks and complete required steps [Admost documentation](https://admost.github.io/amrandroid/).
 
 ## Usage
 
 Here are test ids provided by Admost:
 
 ```markup
-Application Id: @"15066ddc-9c18-492c-8185-bea7e4c7f88c"
-Banner Zone Id: @"b4009772-de04-42c4-bbaa-c18da9e4a1ab"
-Interstitial Zone Id: @"39f74377-5682-436a-9338-9d1c4df410bd"
-RewardedVideo Zone Id: @"2bdefd44-5269-4cbc-b93a-373b74a2f067"
-Offerwall Zone Id: @"1cadca08-33f9-4da7-969e-ef116d4e7d0e"
+For iOS:
+  Application Id: @"15066ddc-9c18-492c-8185-bea7e4c7f88c"
+  Banner Zone Id: @"b4009772-de04-42c4-bbaa-c18da9e4a1ab"
+  Interstitial Zone Id: @"39f74377-5682-436a-9338-9d1c4df410bd"
+  RewardedVideo Zone Id: @"2bdefd44-5269-4cbc-b93a-373b74a2f067"
+  Offerwall Zone Id: @"1cadca08-33f9-4da7-969e-ef116d4e7d0e"
+
+For Android:
+  Application Id = "6cc8e89a-b52a-4e9a-bb8c-579f7ec538fe";
+  Banner Zone Id = "86644357-21d0-45a4-906a-37262461df65";
+  Interstitial Zone Id = "f99e409b-f9ab-4a2e-aa9a-4d143e6809ae";
+  RewardedVideo Zone Id = "88cfcfd0-2f8c-4aba-9f36-cc0ac99ab140";
+  Offerwall Zone Id = "fa1072e4-afcf-49b6-a919-1ab1ab1b0aa9";
 ```
 
 ### Initializing
@@ -38,10 +46,11 @@ Offerwall Zone Id: @"1cadca08-33f9-4da7-969e-ef116d4e7d0e"
 import Admost from "react-native-admost";
 //
 //
+Admost.setAppID("Your Application ID");
 Admost.setUserConsents(true);
 Admost.setSubjectToGDPR(false);
 Admost.setUserChild(false);
-Admost.startWithAppId("15066ddc-9c18-492c-8185-bea7e4c7f88c");
+Admost.start();
 ```
 
 ### Interstitial

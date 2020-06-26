@@ -1,7 +1,7 @@
 {
   "name": "react-native-admost",
   "title": "Admost for React Native",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Admost for React Native",
   "main": "index.js",
   "files": [

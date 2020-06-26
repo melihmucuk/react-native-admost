@@ -66,6 +66,7 @@ repositories {
         // Android JSC is installed from npm
         url "$rootDir/../node_modules/jsc-android/dist"
     }
+    maven { url 'http://repo.admost.com:8081/artifactory/admost' }
     google()
     jcenter()
 }
@@ -73,6 +74,10 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.admost.sdk:amr:2.1.3'
+    implementation 'com.admost.sdk:admost:0.1.0.a18'
+    implementation 'com.google.android.gms:play-services-base:16.1.0'
 }
 
 def configureReactNativePom(def pom) {

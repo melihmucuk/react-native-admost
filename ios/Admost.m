@@ -21,10 +21,16 @@
 
 RCT_EXPORT_MODULE()
 
-RCT_EXPORT_METHOD(startWithAppId:(NSString *)appID)
+RCT_EXPORT_METHOD(start:(RCTPromiseResolveBlock)resolve
+                  reject:(RCTPromiseRejectBlock)reject)
+{
+    [AMRSDK startWithAppId:_appID];
+    resolve(@YES);
+}
+
+RCT_EXPORT_METHOD(setAppID:(NSString *)appID)
 {
     _appID = appID;
-    [AMRSDK startWithAppId:appID];
 }
 
 RCT_EXPORT_METHOD(setUserConsents:(BOOL *)userConsents)
@@ -50,7 +56,7 @@ RCT_EXPORT_METHOD(trackPurchase:(NSString *)transactionId currency:(NSString *)c
     [AMRSDK trackPurchase:transactionId currencyCode:currencyCode amount:price];
 }
 
-RCT_EXPORT_METHOD(setUserId:(NSString *)userId
+RCT_EXPORT_METHOD(setUserId:(NSString *)userId)
 {
     [AMRSDK setUserId:userId];
 }

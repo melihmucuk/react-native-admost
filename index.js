@@ -2,10 +2,10 @@ import {
   NativeModules,
   NativeEventEmitter,
   requireNativeComponent,
+  Platform,
 } from "react-native";
 
 const { Admost, AdmostInterstitial, AdmostRewarded } = NativeModules;
-
 const AIEvents = {
   DID_RECEIVE: "didReceiveInterstitial",
   DID_FAIL_TO_RECEIVE: "didFailToReceiveInterstitial",
@@ -26,15 +26,16 @@ const AREvents = {
 
 const AIEventEmitter = new NativeEventEmitter(AdmostInterstitial);
 const AREventEmitter = new NativeEventEmitter(AdmostRewarded);
-const AdmostBanner = requireNativeComponent("AdmostBanner");
+const AdmostBanner =
+  Platform.OS === "ios" ? requireNativeComponent("AdmostBanner") : null;
 
 export {
   AdmostInterstitial,
   AdmostRewarded,
-  AdmostBanner,
   AIEvents,
-  AREvents,
   AIEventEmitter,
+  AREvents,
   AREventEmitter,
+  AdmostBanner,
 };
 export default Admost;

@@ -13,7 +13,10 @@ import com.facebook.react.bridge.JavaScriptModule;
 public class AdmostPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-        return Arrays.<NativeModule>asList(new AdmostModule(reactContext));
+        return Arrays.<NativeModule>asList(
+                new AdmostModule(reactContext),
+                new AdmostInterstitial(reactContext),
+                new AdmostRewarded(reactContext));
     }
 
     @Override
