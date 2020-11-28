@@ -1,6 +1,5 @@
 package com.reactnative.admost;
 
-import android.telecom.Call;
 import android.util.Log;
 
 import com.facebook.react.bridge.NativeModule;
