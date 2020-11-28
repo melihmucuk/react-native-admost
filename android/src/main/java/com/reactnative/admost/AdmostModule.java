@@ -85,6 +85,11 @@ public class AdmostModule extends ReactContextBaseJavaModule {
         AdMost.getInstance().setUserId(userId);
     }
 
+    @ReactMethod
+    public void trackPurchase(String purchaseData, String signature, String jsonSkuDetail) {
+        AdMost.getInstance().trackPurchase(purchaseData, signature, jsonSkuDetail);
+    }
+
     public static void sendEvent(String eventName, String eventValue) {
         reactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(eventName, eventValue);
     }
